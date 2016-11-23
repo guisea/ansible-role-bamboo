@@ -63,6 +63,10 @@
   notify: restart bamboo
   tags: hswong3i.bamboo
 
+- name: "FIXME: Make service available Ansible 2.2"
+  command: systemctl enable bamboo
+  changed_when: false
+
 - name: enable service
   service:
     name: "bamboo"
