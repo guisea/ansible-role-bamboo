@@ -22,3 +22,31 @@ bamboo_proxy_name: ~
 bamboo_scheme: ~
 bamboo_server_port: "8007"
 bamboo_url: "https://downloads.atlassian.com/software/bamboo/downloads/{{ bamboo_archive }}"
+
+# LDAP/AD Authenticated user directory setup
+
+# Should we setup AD/LDAP auth?
+bamboo_ldap_authentication: false
+bamboo_ldap_host: ~
+bamboo_ldap_port: 389
+# This is the FQDN from LDAP e.g. cn=admin,dc=atlassian,dc=private
+bamboo_ldap_username: ~
+bamboo_ldap_password: secret
+# Bamboo Security Protocol values ssl or plain
+bamboo_ldap_securityprotocol: plain
+# Base domain name e.g dc=atlassian,dc=private
+bamboo_ldap_basecontext: ~
+# baseUserNamespace = Base OU for user lookups e.g dc=staff,dc=perftest,dc=atlassian,dc=private
+bamboo_ldap_baseusernamespace: ~
+# baseGroupNamespace = Base OU for user lookups e.g dc=groups,dc=perftest,dc=atlassian,dc=private
+bamboo_ldap_basegroupnamespace: ~
+bamboo_ldap_usernameattribute: cn
+bamboo_ldap_usersearchfilter: "(objectClass=inetorgperson)"
+bamboo_ldap_firstnameattribute: givenname
+bamboo_ldap_surnameattribute: sn
+bamboo_ldap_emailattribute: mail
+bamboo_ldap_groupnameattribute: cn
+bamboo_ldap_groupsearchfilter: "(objectClass=groupOfNames)"
+bamboo_ldap_membershipattribute: member
+
+
