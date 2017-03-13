@@ -62,6 +62,14 @@
   notify: restart bamboo
   tags: hswong3i.bamboo
 
+- name: configure LDAP/AD Authentication
+  blockinfile:
+    block: "{{ lookup('template', 'templates/var/lib/bamboo/xml-data/configuration/atlassian-user.xml.j2') }}"
+    dest: "{{ bamboo_home }}/xml-data/configuration/atlassian-user.xml"
+    insertbefore: "</repositories>"
+    state: present
+  when: bamboo_ldap_authentication
+  
 - name: "FIXME: Make service available Ansible 2.2"
   command: systemctl enable bamboo
   changed_when: false
