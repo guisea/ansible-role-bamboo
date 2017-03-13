@@ -1,0 +1,19 @@
+        <ldap key="ldapRepository" name="LDAP Repository@hecate.atlassian.com" cache="true">
+          <host>{{ bamboo_ldap_host }}</host>
+          <port>{{ bamboo_ldap_port }}</port>
+          <securityPrincipal>{{ bamboo_ldap_username }}</securityPrincipal>
+          <securityCredential>{{ bamboo_ldap_password}}</securityCredential>
+          <securityProtocol>{{ bamboo_ldap_securityprotocol }}</securityProtocol>
+          <securityAuthentication>simple</securityAuthentication>
+          <baseContext>{{ bamboo_ldap_basecontext }}</baseContext>
+          <baseUserNamespace>{{ bamboo_ldap_baseusernamespace }}</baseUserNamespace>
+          <baseGroupNamespace>{{ bamboo_ldap_basegroupnamespace }}</baseGroupNamespace>
+          <usernameAttribute>{{ bamboo_ldap_usernameattribute }}</usernameAttribute>
+          <userSearchFilter>{{ bamboo_ldap_usersearchfilter }}</userSearchFilter>
+          <firstnameAttribute>{{ bamboo_ldap_firstnameattribute }}</firstnameAttribute>
+          <surnameAttribute>{{ bamboo_ldap_surnameattribute }}</surnameAttribute>
+          <emailAttribute>{{ bamboo_ldap_emailattribute }}</emailAttribute>
+          <groupnameAttribute>{{ bamboo_ldap_groupnameattribute }}</groupnameAttribute>
+          <groupSearchFilter>{{ bamboo_ldap_groupsearchfilter }}</groupSearchFilter>
+          <membershipAttribute>{{ bamboo_ldap_membershipattribute }}</membershipAttribute>
+        </ldap>
