@@ -37,7 +37,6 @@
   get_url:
     url: "{{ bamboo_url }}"
     dest: "/tmp/{{ bamboo_archive }}"
-    checksum: "{{ bamboo_checksum }}"
   tags: hswong3i.bamboo
 
 - name: unarchive package
